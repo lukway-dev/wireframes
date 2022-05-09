@@ -1,0 +1,488 @@
+@import '../resources/variables'
+
+// Home
+.Hero_Container_Fluid
+  background-image: url('../resources/images/hero-background.png')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  position: relative
+
+.Hero
+  min-height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+.Hero_Banner
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.Hero_Title_Container
+  width: 60%
+
+.Hero_Title
+  margin: 0 0 20px
+  color: $cyan
+  font-family: 'Font-Condensed-Bold', sans-serif
+  font-size: 90px
+
+.Hero_Caption
+  margin: 0
+  color: $gray
+  font-family: 'Font-Condensed-Regular', sans-serif
+  font-size: 30px
+  font-weight: 300
+  &_Highlight
+    font-family: 'Font-Condensed-Bold', sans-serif
+
+.Hero_Link
+  margin-top: 30px
+  border-radius: 10px
+  padding: 18px 26px
+  background-color: $cyan
+  display: inline-block
+  text-transform: uppercase
+  font-family: 'Font-Condensed-Bold', sans-serif
+  font-size: 20px
+  &:hover
+    color: $white
+    background-color: $cyan-dark
+
+.Hero_Image
+  width: 100%
+  max-width: 465px
+
+.Hero_Bottom_Detail
+  position: absolute
+  top: 100%
+  left: calc(50% - 17px)
+  z-index: 1
+
+.Visor_Container
+  padding-bottom: 120px
+
+.Visor
+  aspect-ratio: 66 / 37
+  background-image: url('../resources/images/visor.png')
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  &_Text
+    color: $white
+    font-family: 'Font-Condensed-Regular', sans-serif
+    font-size: 28px
+    font-weight: 300
+    &_Highlight
+      color: $cyan-light
+      font-family: 'Font-Condensed-Bold', sans-serif
+  &_Button
+    height: 100px
+    width: 100px
+    border-radius: 20px
+    padding-left: 15px
+    padding-bottom: 10px
+    background-color: $gray
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    bottom: -60px
+    left: calc(50% - 50px)
+    transform: rotate(45deg)
+    &:hover
+      background-color: $gray-dark
+    &_Icon
+      width: 40px
+      filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.15))
+      transform: rotate(-45deg)
+  &_Data
+    padding-left: 5% !important
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    &_Title
+      margin: 0
+      color: $cyan
+      font-family: "Font-Bold", sans-serif
+      font-size: 20px
+    &_Text
+      margin: 0
+      font-size: 18px
+
+
+// Servicios
+.Services_Container_Fluid
+  background: linear-gradient(180deg, #368290 0%, #3B8F9F 2.08%, #419FB1 6.77%)
+  position: relative
+
+.Services
+  padding: 100px 0
+  text-align: center
+  &_Title
+    margin-bottom: 1rem
+    color: $white
+    font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 60px
+  &_Caption
+    color: $white
+    font-size: 28px
+
+.ServicesCards > div:nth-child(2)
+  margin-top: 200px
+
+.ServiceCard
+  aspect-ratio: 13 / 6
+  max-height: 300px
+  margin-bottom: 50px
+  display: flex
+  position: relative
+  box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.3)
+  &_Image_Container
+    width: 50%
+    height: 100%
+    border-radius: 5px 0 0 5px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-size: cover
+  &_Image_Container_1
+    @extend .ServiceCard_Image_Container
+    background-image: url('../resources/images/service-card-1.png')
+  &_Image_Container_2
+    @extend .ServiceCard_Image_Container
+    background-image: url('../resources/images/service-card-2.png')
+  &_Image_Container_3
+    @extend .ServiceCard_Image_Container
+    background-image: url('../resources/images/service-card-3.png')
+  &_Image_Container_4
+    @extend .ServiceCard_Image_Container
+    background-image: url('../resources/images/service-card-4.png')
+  &_Image
+    width: 40%
+  &_Text_Container
+    width: 50%
+    height: 100%
+    border-radius: 0 5px 5px 0
+    padding: 25px 20px
+    background-color: $white
+    text-align: left
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+  &_Title
+    margin-top: 0
+    margin-bottom: 1rem
+    color: $gray-dark
+    font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 26px
+  &_Text
+    font-size: 18px
+    font-weight: 300
+  &_Link
+    color: $gray-dark
+    font-family: 'Font-Bold', sans-serif
+    font-size: 20px
+    &:hover
+      color: $cyan
+
+
+// Sectors
+.Sectors_Container_Fluid
+  background: linear-gradient(180deg, #1F1F1F 0%, #2C2C2C 3.65%, #3A3A3A 29.69%)
+
+.Sectors
+  padding: 100px 0
+  text-align: center
+  &_Title
+    margin-bottom: 1rem
+    color: $white
+    font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 60px
+  &_Caption
+    margin-bottom: 60px
+    color: $white
+    font-size: 28px
+    font-weight: 300
+
+.SectorCard
+  height: 100%
+  border: 1px solid $cyan-light
+  border-radius: 5px
+  padding: 20px
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  color: $white
+  &_Image
+    width: 40%
+  &_Title
+    font-size: 20px
+
+
+// Idea
+.Idea
+  padding-bottom: 50px
+  background: linear-gradient(180deg, #DDDDDD 0%, #F0F0F0 3.65%, #FFFFFF 29.69%)
+  display: flex
+  justify-content: center
+  position: relative
+  &_Text_Container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: 0px
+    bottom: 0px
+    left: 0px
+    right: 0px
+  &_Title
+    margin-bottom: 0
+    color: $cyan
+    font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 60px
+  &_Text
+    margin-top: 0
+    font-size: 28px
+  &_Button
+    border-radius: 12px
+    padding: 16px 24px
+    background: conic-gradient(from 180deg at 50% 50%, #419FB1 -16.88deg, #55CBD8 131.25deg, #419FB1 243.75deg, #419FB1 343.12deg, #55CBD8 491.25deg)
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25)
+    text-transform: uppercase
+    font-family: 'Font-Condensed-Bold', sans-serif
+    &:hover
+      color: $white
+      opacity: .8
+
+
+// Contact
+.Contact_Fluid_Container
+  min-height: calc(100vh - 80px)
+  background-image: url('../resources/images/home-contact-background.png')
+  background-size: cover
+  background-position: top
+
+.Contact
+  height: calc(100vh - 80px)
+  display: flex
+  padding-bottom: 50px
+  justify-content: center
+  align-items: flex-end
+
+@media (max-width: 1400px)
+  .Visor
+    &_Button
+      bottom: -70px
+
+@media (max-width: 1200px)
+  .Visor
+    &_Button
+      height: 90px
+      width: 90px
+      left: calc(50% - 45px)
+  .ServiceCard
+    &_Text_Container
+      padding: 20px 16px
+    &_Title
+      font-size: 23px
+    &_Text
+      font-size: 16px
+    &_Link
+      font-size: 18px
+
+@media (max-width: 992px)
+  .Hero
+    &_Title
+      font-size: 70px
+    &_Caption
+      font-size: 25px
+    &_Link
+      font-size: 18px
+  .Visor_Container
+    display: flex
+    flex-direction: column
+  .Visor
+    margin: 20px 0 100px
+    &_Button
+      height: 120px
+      width: 120px
+      border-radius: 18px
+      bottom: -80px
+      left: calc(50% - 60px)
+  .Visor_Data_Item
+    margin-bottom: 20px
+  .Services
+    &_Title
+      font-size: 45px
+    &_Caption
+      font-size: 24px
+  .ServicesCards > div:nth-child(2)
+    margin-top: 0
+  .ServiceCard
+    margin: 0 auto 50px
+  .Sectors
+    padding: 75px 0
+    &_Title
+      font-size: 45px
+    &_Caption
+      margin-bottom: 50px
+      font-size: 24px
+  .Idea
+    &_Title
+      font-size: 45px
+    &_Text
+      margin-top: 0
+      font-size: 24px
+  .Contact
+    form
+      width: 100%
+
+@media (max-width: 768px)
+  .Hero
+    margin-top: 80px
+    &_Banner
+      flex-direction: column
+    &_Title_Container
+      width: 100%
+      padding-top: 30px
+      text-align: center
+  .Visor
+    &_Button
+      height: 100px
+      width: 100px
+      border-radius: 18px
+      bottom: -80px
+      left: calc(50% - 50px)
+      &_Icon
+        width: 34px
+  .ServiceCard
+    margin: 0 auto 40px
+    &_Text_Container
+      padding: 16px 12px
+  .SectorCard
+    &_Image
+      width: 30%
+
+@media (max-width: 576px)
+  .Hero
+    &_Title
+      font-size: 50px
+    &_Caption
+      font-size: 20px
+    &_Link
+      font-size: 18px
+  .Visor
+    width: calc(100% + 60px) !important
+    max-width: unset !important
+    margin: 0 -30px 100px
+    &_Button
+      height: 80px
+      width: 80px
+      border-radius: 16px
+      bottom: -50px
+      left: calc(50% - 40px)
+  .Services
+    &_Title
+      font-size: 30px
+    &_Caption
+      font-size: 20px
+  .ServiceCard
+    margin: 0 auto 30px
+    &_Title
+      font-size: 20px
+    &_Text
+      font-size: 14px
+  .Sectors
+    &_Title
+      font-size: 30px
+    &_Caption
+      margin-bottom: 50px
+      font-size: 20px
+  .SectorCard
+    &_Image
+      width: 40%
+  .Idea
+    &_Title
+      font-size: 30px
+    &_Text
+      margin-top: 0
+      font-size: 20px
+
+@media (max-width: 425px)
+  .Visor
+    &_Button
+      height: 70px
+      width: 70px
+      border-radius: 14px
+      bottom: -50px
+      left: calc(50% - 35px)
+  .ServiceCard
+    aspect-ratio: unset
+    max-height: 300px
+    height: fit-content
+    &_Image_Container
+      width: 50%
+      height: unset
+    //   border-radius: 5px 0 0 5px
+    //   display: flex
+    //   justify-content: center
+    //   align-items: center
+    //   background-size: cover
+    // &_Image_Container_1
+    //   @extend .ServiceCard_Image_Container
+    //   background-image: url('../resources/images/service-card-1.png')
+    // &_Image_Container_2
+    //   @extend .ServiceCard_Image_Container
+    //   background-image: url('../resources/images/service-card-2.png')
+    // &_Image_Container_3
+    //   @extend .ServiceCard_Image_Container
+    //   background-image: url('../resources/images/service-card-3.png')
+    // &_Image_Container_4
+    //   @extend .ServiceCard_Image_Container
+    //   background-image: url('../resources/images/service-card-4.png')
+    // &_Text_Container
+    //   width: 50%
+    //   height: 100%
+    //   border-radius: 0 5px 5px 0
+    //   padding: 25px 20px
+    //   background-color: $white
+    //   text-align: left
+    //   display: flex
+    //   flex-direction: column
+    //   justify-content: space-between
+    //   align-items: flex-start
+    // &_Title
+    //   margin-top: 0
+    //   margin-bottom: 1rem
+    //   color: $gray-dark
+    //   font-family: 'Font-Condensed-Bold', sans-serif
+    //   font-size: 26px
+    // &_Text
+    //   font-size: 18px
+    //   font-weight: 300
+    // &_Link
+    //   color: $gray-dark
+    //   font-family: 'Font-Bold', sans-serif
+    //   font-size: 20px
+    //   &:hover
+    //     color: $cyan
+
+@media (max-width: 385px)
+  .Visor
+    &_Button
+      height: 70px
+      width: 70px
+      border-radius: 14px
+      bottom: -50px
+      left: calc(50% - 35px)
