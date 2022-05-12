@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import BrandIcon from '../assets/brand/icon.png'
+import BrandLogo from '../assets/brand/logo.png'
+import XIcon from '../assets/icons/x.svg'
+import HamburguerIcon from '../assets/icons/hamburguer.svg'
 import styles from '../styles/containers/Header.module.sass'
 
 const Header = () => {
@@ -45,14 +49,14 @@ const Header = () => {
 					<button className={styles.Button} onClick={toggleMenu}>
 						{isMobile
 							?	showMenu
-								? <img src={'/assets/x.svg'}/>
-								: <img src={'/assets/hamburguer.svg'}/>
+								? <img src={XIcon}/>
+								: <img src={HamburguerIcon}/>
 							: <></>
 						}
 					</button>
 					<Link to="/" className={styles.Link_Container}>
 						<img
-							src='/assets/brand/icon.png'
+							src={BrandIcon}
 							className={styles.Icon}
 							alt="Wireframes Icon"
 							width={37}
@@ -60,7 +64,7 @@ const Header = () => {
 							quality={100}
 						/>
 						<img
-							src='/assets/brand/logo.png'
+							src={BrandLogo}
 							className={styles.Logo}
 							alt="Wireframes Logo"
 							width={137}

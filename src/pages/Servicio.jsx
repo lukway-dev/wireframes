@@ -1,16 +1,32 @@
 import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import { useParams } from 'react-router-dom'
-import Service1 from '../assets/images/service-1.png'
-import Service2 from '../assets/images/service-2.png'
-import Service3 from '../assets/images/service-3.png'
-import Service4 from '../assets/images/service-4.png'
+import Service1 from '../assets/services/service-1.png'
+import Service1Item1 from '../assets/services/service-1-item-1.png'
+import Service1Item2 from '../assets/services/service-1-item-2.png'
+import Service1CaptionImage from '../assets/services/service-1-caption-image.png'
+import Service2 from '../assets/services/service-2.png'
+import Service2Item1 from '../assets/services/service-2-item-1.png'
+import Service2CaptionImage from '../assets/services/service-2-caption-image.png'
+import Service3 from '../assets/services/service-3.png'
+import Service3Item1 from '../assets/services/service-3-item-1.png'
+import Service3Item2 from '../assets/services/service-3-item-2.png'
+import Service3CaptionImage from '../assets/services/service-3-caption-image.png'
+import Service4 from '../assets/services/service-4.png'
+import Service4Item1 from '../assets/services/service-4-item-1.png'
+import Service4Item2 from '../assets/services/service-4-item-2.png'
+import Service4CaptionImage from '../assets/services/service-4-caption-image.png'
+import DetailWhite from '../assets/details/bottom-detail.svg'
+import DetailCyan from '../assets/details/bottom-detail-cyan.svg'
 import styles from '../styles/pages/Servicios.module.sass'
 import Companies from '../components/Companies'
 
 const Servicio = () => {
 	const [data, setData] = useState('')
 	const { service } = useParams()
+	const { pathname } = useLocation()
+
 
 	// const serviceIds = ['realidad-virtual', 'realidad-aumentada', 'experiencias-3d', 'metaverso']
 	const services = [
@@ -24,16 +40,16 @@ const Servicio = () => {
 				{
 					title: 'VR para arquitectura y contrucción',
 					description: 'Diseñamos un showroom virtual,  el cual permitirá que muestres a tus clientes los espacios arquitectónicos antes de su adquisición, e inclusive antes de ser construídos.',
-					image: '/assets/service-1-item-1.png',
+					image: Service1Item1,
 				}, {
 					title: 'VR para capacitaciones',
 					description: 'Capacita a tu personal con experiencias inmersivas que les permitirán aprender y comprender algunos procesos de forma interactiva sin necesidad de estar presentes físicamente.',
-					image: '/assets/service-1-item-2.png',
+					image: Service1Item2,
 				}
 			],
 			caption: '¿Por que implementar la',
 			caption_highlight: 'Realidad Virtual?',
-			caption_image: '/assets/service-1-caption-image.png',
+			caption_image: Service1CaptionImage,
 			caption_items: [
 				{
 					text: 'Nos permite recrear espacios en un entorno digital, generando interacción y actividades que el usuario experimentá como en la vida real.'
@@ -53,12 +69,12 @@ const Servicio = () => {
 				{
 					title: 'AR para retail',
 					description: 'Permite que el usuario conozca tus productos como un modelado 3D a tamaño real dentro del entorno antes de que sean adquiridos.',
-					image: '/assets/service-2-item-1.png',
+					image: Service2Item1,
 				}
 			],
 			caption: '¿Por que implementar la',
 			caption_highlight: 'Realidad Aumentada?',
-			caption_image: '/assets/service-2-caption-image.png',
+			caption_image: Service2CaptionImage,
 			caption_items: [
 				{
 					text: 'Permite a los usuarios acceder a la visualización del producto de forma interactiva sin necesidad de desplazarse al punto de venta.'
@@ -78,16 +94,16 @@ const Servicio = () => {
 				{
 					title: 'Experiencia Web 3D de productos',
 					description: 'Diseños 3D que permiten a los usuarios ver cuál es el aspecto de su próxima adquisición desde una página web, mostrando detalles como sus medidas, características, y modo de uso.',
-					image: '/assets/service-3-item-1.png',
+					image: Service3Item1,
 				}, {
 					title: 'Experiencia Web 3D para espacios',
 					description: 'Espacios 3D creados con el objetivo de que el usuario pueda recorrer, experimentar y personalizar el espacio acorde a sus necesidades.',
-					image: '/assets/service-3-item-2.png',
+					image: Service3Item2,
 				}
 			],
 			caption: '¿Por que implementar las',
 			caption_highlight: 'Experiencias 3D en la Web?',
-			caption_image: '/assets/service-3-caption-image.png',
+			caption_image: Service3CaptionImage,
 			caption_items: [
 				{
 					text: 'Permite dar a conocer tus productos, sin la necesidad de desplazarse a un espacio físico.'
@@ -107,16 +123,16 @@ const Servicio = () => {
 				{
 					title: 'Experiencia Web 3D de productos',
 					description: 'Diseños 3D que permiten a los usuarios ver cuál es el aspecto de su próxima adquisición desde una página web, mostrando detalles como sus medidas, características, y modo de uso.',
-					image: '/assets/service-4-item-1.png',
+					image: Service4Item1,
 				}, {
 					title: 'Experiencia Web 3D para espacios',
 					description: 'Espacios 3D creados con el objetivo de que el usuario pueda recorrer, experimentar y personalizar el espacio acorde a sus necesidades.',
-					image: '/assets/service-4-item-2.png',
+					image: Service4Item2,
 				}
 			],
 			caption: '¿Por que implementar las',
 			caption_highlight: 'El Metaverso?',
-			caption_image: '/assets/service-4-caption-image.png',
+			caption_image: Service4CaptionImage,
 			caption_items: [
 				{
 					text: 'Permite dar a conocer tus productos, sin la necesidad de desplazarse a un espacio físico.'
@@ -153,6 +169,9 @@ const Servicio = () => {
 		setData(services[index])
 	}, [service])
 
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [pathname])
 
 	if(!data) return null
 
@@ -179,7 +198,7 @@ const Servicio = () => {
 					</div>
 				</div>
 				<img
-					src='/assets/bottom-detail-cyan.svg'
+					src={DetailCyan}
 					className={styles.Hero_Bottom_Detail}
 					alt="Wireframes Planet"
 				/>
@@ -233,7 +252,7 @@ const Servicio = () => {
 					}
 				</div>
 				<img
-					src='/assets/bottom-detail.svg'
+					src={DetailWhite}
 					className={styles.Hero_Bottom_Detail}
 					alt="Wireframes Planet"
 				/>

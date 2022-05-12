@@ -1,23 +1,29 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import Planet from '../assets/images/planet.png'
 import PlayIcon from '../assets/images/visor-button-icon.png'
-import Service1 from '../assets/images/service-1.png'
-import Service2 from '../assets/images/service-2.png'
-import Service3 from '../assets/images/service-3.png'
-import Service4 from '../assets/images/service-4.png'
-import Sector1 from '../assets/images/sector-1.png'
-import Sector2 from '../assets/images/sector-2.png'
-import Sector3 from '../assets/images/sector-3.png'
-import Sector4 from '../assets/images/sector-4.png'
-import Sector5 from '../assets/images/sector-5.png'
-import Sector6 from '../assets/images/sector-6.png'
+import Service1 from '../assets/services/service-1.png'
+import Service2 from '../assets/services/service-2.png'
+import Service3 from '../assets/services/service-3.png'
+import Service4 from '../assets/services/service-4.png'
+import Sector1 from '../assets/sectors/sector-1.png'
+import Sector2 from '../assets/sectors/sector-2.png'
+import Sector3 from '../assets/sectors/sector-3.png'
+import Sector4 from '../assets/sectors/sector-4.png'
+import Sector5 from '../assets/sectors/sector-5.png'
+import Sector6 from '../assets/sectors/sector-6.png'
 import Lampara from '../assets/images/lampara.png'
+import DetailWhite from '../assets/details/bottom-detail.svg'
+import DetailCyan from '../assets/details/bottom-detail-cyan.svg'
 import styles from '../styles/pages/Home.module.sass'
 import Companies from '../components/Companies'
 import Form from '../components/Form'
 
 const Home = () => {
+	const { pathname } = useLocation()
+
 	const sectors = [
 		{
 			title: 'Industria Automotriz',
@@ -63,6 +69,10 @@ const Home = () => {
 			animationDelay: 450
 		},
 	]
+
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [pathname])
 
 	return (
 		<main>
@@ -146,7 +156,7 @@ const Home = () => {
 				</div>
 
 				<img
-					src='/assets/bottom-detail.svg'
+					src={DetailWhite}
 					className={styles.Hero_Bottom_Detail}
 					alt="Wireframes Planet"
 				/>
@@ -266,7 +276,7 @@ const Home = () => {
 					</div>
 				</div>
 				<img
-					src='/assets/bottom-detail-cyan.svg'
+					src={DetailCyan}
 					className={styles.Hero_Bottom_Detail}
 					alt="Wireframes Planet"
 				/>

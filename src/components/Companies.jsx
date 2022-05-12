@@ -1,5 +1,10 @@
 import { Navigation, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import Company1 from '../assets/companies/company-1.png'
+import Company2 from '../assets/companies/company-2.png'
+import Company3 from '../assets/companies/company-3.png'
+import Company4 from '../assets/companies/company-4.png'
+import Company5 from '../assets/companies/company-5.png'
 import styles from '../styles/components/Companies.module.sass'
 
 const Companies = () => {
@@ -7,29 +12,19 @@ const Companies = () => {
 	const items = [
 		{
 			name: 'Legion Network',
-			image: '/assets/companies/company-1.png',
-			width: 288,
-			height: 60,
+			image: Company1,
 		}, {
 			name: 'Motive.io',
-			image: '/assets/companies/company-2.png',
-			width: 222,
-			height: 60,
+			image: Company2,
 		}, {
 			name: 'Quantified Design Solutions',
-			image: '/assets/companies/company-3.png',
-			width: 240,
-			height: 72,
+			image: Company3,
 		}, {
 			name: 'Tech Change',
-			image: '/assets/companies/company-4.png',
-			width: 252,
-			height: 60,
+			image: Company4,
 		}, {
 			name: 'Foresight Sports',
-			image: '/assets/companies/company-5.png',
-			width: 258,
-			height: 38,
+			image: Company5,
 		},
 	]
 	return (

@@ -1,8 +1,20 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import Hands from '../assets/images/hands.png'
+import Features from '../assets/images/features.png'
+import WorkUs from '../assets/images/work-us.png'
+import DetailWhite from '../assets/details/bottom-detail.svg'
+import DetailCyan from '../assets/details/bottom-detail-cyan.svg'
 import styles from '../styles/pages/Nosotros.module.sass'
 
 const Nosotros = () => {
+	const { pathname } = useLocation()
+
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [pathname])
+
 	return (
 		<main>
 			<Helmet>
@@ -21,7 +33,7 @@ const Nosotros = () => {
 								data-aos="zoom-in"
 							/>
 						</div>
-						<div className="col-12 col-md-5">
+						<div className="col-12 col-md-5 p-0">
 							<h1 className={styles.Hero_Title} data-aos="fade-up">Nosotros</h1>
 							<p className={styles.Hero_Text} data-aos="fade-up" data-aos-delay="150">
 								Somos un equipo especializado en brindar soluciones por medio de
@@ -32,7 +44,7 @@ const Nosotros = () => {
 					</div>
 				</div>
 				<img
-					src='/assets/bottom-detail-cyan.svg'
+					src={DetailCyan}
 					className={styles.Hero_Bottom_Detail}
 					alt="Wireframes Planet"
 				/>
@@ -71,7 +83,7 @@ const Nosotros = () => {
 						</div>
 						<div className={`${styles.Features_Image_Container} col-12 col-md-5`}>
 							<img
-								src="/assets/features.png"
+								src={Features}
 								alt='Calidad, Optimización, Comunicación'
 								className={styles.Features_Image}
 								data-aos="zoom-in"
@@ -80,7 +92,7 @@ const Nosotros = () => {
 					</div>
 				</div>
 				<img
-					src='/assets/bottom-detail.svg'
+					src={DetailWhite}
 					className={styles.Hero_Bottom_Detail}
 					alt="Wireframes Planet"
 					data-aos="zoom-in"
@@ -93,7 +105,7 @@ const Nosotros = () => {
 					<div className="row justify-content-between">
 						<div className={`${styles.Work_Image_Container} col-12 col-md-5`}>
 							<img
-								src="/assets/work-us.png"
+								src={WorkUs}
 								alt='Únete al equipo'
 								className={styles.Work_Image}
 								data-aos="fade-up"

@@ -1,48 +1,64 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import Companies from '../components/Companies'
+import Project1 from '../assets/portfolio/project-1.png'
+import Project2 from '../assets/portfolio/project-2.png'
+import Project3 from '../assets/portfolio/project-3.png'
+import Project4 from '../assets/portfolio/project-4.png'
+import Project5 from '../assets/portfolio/project-5.png'
+import Project6 from '../assets/portfolio/project-6.png'
+import Project7 from '../assets/portfolio/project-7.png'
+import Project8 from '../assets/portfolio/project-8.png'
+import Project9 from '../assets/portfolio/project-9.png'
 import styles from '../styles/pages/Portafolio.module.sass'
 
 const Portafolio = () => {
+	const { pathname } = useLocation()
 
 	const projects = [
 		{
 			title: 'Luxury Apartment',
 			topic: 'Realidad Virtual',
-			image: '/assets/project-1.png'
+			image: Project1
 		}, {
 			title: 'Streaming Room',
 			topic: 'Servicios de Metaverso',
-			image: '/assets/project-2.png'
+			image: Project2
 		}, {
 			title: 'Green Filters',
 			topic: 'Experiencias 3D en la Web',
-			image: '/assets/project-3.png'
+			image: Project3
 		}, {
 			title: 'Blue Moon',
 			topic: 'Servicios de Metaverso',
-			image: '/assets/project-4.png'
+			image: Project4
 		}, {
 			title: 'Bill & Melinda Gates Foundation',
 			topic: 'Servicios de Metaverso',
-			image: '/assets/project-5.png'
+			image: Project5
 		}, {
 			title: 'One Laptop Per Kid',
 			topic: 'Experiencias 3D en la Web',
-			image: '/assets/project-6.png'
+			image: Project6
 		}, {
 			title: 'Furniture A/R',
 			topic: 'Realidad Aumentada',
-			image: '/assets/project-7.png'
+			image: Project7
 		}, {
 			title: 'Furniture Configurator',
 			topic: 'Experiencias 3D en la Web',
-			image: '/assets/project-8.png'
+			image: Project8
 		}, {
 			title: 'Syringe Assenbly Simulation',
 			topic: 'Experiencias 3D en la Web',
-			image: '/assets/project-9.png'
+			image: Project9
 		}
 	]
+
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [pathname])
 
 	return (
 		<main className={styles.main}>
