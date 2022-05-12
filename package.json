@@ -1,8 +1,7 @@
 {
-  "name": "webpage-2",
+  "name": "wireframe-reality",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lukway-dev.github.io/wireframes/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
