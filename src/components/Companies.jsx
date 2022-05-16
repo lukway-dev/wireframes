@@ -38,9 +38,11 @@ const Companies = () => {
 				className={styles.Images_Container}
 				modules={[ Autoplay, Navigation ]}
 				slidesPerView={1}
+				spaceBetween={20}
 				breakpoints={{
 					425: {
 						slidesPerView: 1,
+						spaceBetween: 20
 					},
 					768: {
 						slidesPerView: 2,
@@ -59,6 +61,7 @@ const Companies = () => {
 				// navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
 				loop
 				speed={1500}
+				grabCursor={true}
 			>
 				{items.map((item, index) => (
 					<SwiperSlide key={`Company-${index}`} className={styles.Item}>

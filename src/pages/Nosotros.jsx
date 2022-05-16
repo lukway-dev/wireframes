@@ -23,8 +23,8 @@ const Nosotros = () => {
 
 			{/* Hero */}
 			<section className={`${styles.Hero_Container_Fluid} container-fluid`}>
-				<div className={`${styles.Hero} container`}>
-					<div className="row align-items-center">
+				<div className={`${styles.Hero} container p-0`}>
+					<div className="row align-items-start">
 						<div className="col-12 col-md-7">
 							<img
 								src={Hands}
@@ -33,7 +33,7 @@ const Nosotros = () => {
 								data-aos="zoom-in"
 							/>
 						</div>
-						<div className="col-12 col-md-5 p-0">
+						<div className="col-12 col-md-5 p-md-0">
 							<h1 className={styles.Hero_Title} data-aos="fade-up">Nosotros</h1>
 							<p className={styles.Hero_Text} data-aos="fade-up" data-aos-delay="150">
 								Somos un equipo especializado en brindar soluciones por medio de
@@ -52,9 +52,9 @@ const Nosotros = () => {
 
 			{/* Features */}
 			<section className={`${styles.Features_Container_Fluid} container-fluid`}>
-				<div className={`${styles.Features} container`}>
-					<div className="row h-100 flex-column-reverse flex-md-row justify-content-between">
-						<div className={`${styles.Features_Text_Container} col-12 col-md-5`}>
+				<div className={`${styles.Features} container p-0`}>
+					<div className="row h-100 flex-column-reverse flex-lg-row justify-content-between">
+						<div className={`${styles.Features_Text_Container} col-12 col-lg-5`}>
 							<h2 className={styles.Features_Title} data-aos="fade-up">Nos caracteriza</h2>
 							<div className={styles.Features_Items_Container}>
 								<div className={styles.Features_Item} data-aos="fade-up">
@@ -81,7 +81,7 @@ const Nosotros = () => {
 							</div>
 
 						</div>
-						<div className={`${styles.Features_Image_Container} col-12 col-md-5`}>
+						<div className={`${styles.Features_Image_Container} col-12 col-lg-6`}>
 							<img
 								src={Features}
 								alt='Calidad, Optimización, Comunicación'
@@ -100,10 +100,10 @@ const Nosotros = () => {
 			</section>
 
 			{/* Work with us */}
-			<section className={`${styles.Work_Container_Fluid} container-fluid`}>
+			<section className={`${styles.Work_Container_Fluid} container-fluid py-5`}>
 				<div className={`${styles.Work} container`}>
 					<div className="row justify-content-between">
-						<div className={`${styles.Work_Image_Container} col-12 col-md-5`}>
+						<div className={`${styles.Work_Image_Container} col-12 col-lg-6 ps-0`}>
 							<img
 								src={WorkUs}
 								alt='Únete al equipo'
@@ -111,7 +111,7 @@ const Nosotros = () => {
 								data-aos="fade-up"
 							/>
 						</div>
-						<div className="col-12 col-md-5">
+						<div className="col-12 col-lg-6 px-0">
 							<div className={styles.Work_Text_Container}>
 								<h2 className={styles.Work_Title} data-aos="fade-up">Únete al equipo</h2>
 								<p className={styles.Work_Text} data-aos="fade-up" data-aos-delay="150">

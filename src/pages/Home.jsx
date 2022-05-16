@@ -2,6 +2,11 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import Helmet from 'react-helmet'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper'
+import Companies from '../components/Companies'
+import Form from '../components/Form'
+import styles from '../styles/pages/Home.module.sass'
 import Planet from '../assets/images/planet.png'
 import PlayIcon from '../assets/images/visor-button-icon.png'
 import Service1 from '../assets/services/service-1.png'
@@ -16,10 +21,10 @@ import Sector5 from '../assets/sectors/sector-5.png'
 import Sector6 from '../assets/sectors/sector-6.png'
 import Lampara from '../assets/images/lampara.png'
 import DetailWhite from '../assets/details/bottom-detail.svg'
+import DetailDark from '../assets/details/bottom-detail-dark.svg'
 import DetailCyan from '../assets/details/bottom-detail-cyan.svg'
-import styles from '../styles/pages/Home.module.sass'
-import Companies from '../components/Companies'
-import Form from '../components/Form'
+import SwiperPrevButton from '../assets/details/swiper-left.svg'
+import SwiperNextButton from '../assets/details/swiper-right.svg'
 
 const Home = () => {
 	const { pathname } = useLocation()
@@ -82,7 +87,7 @@ const Home = () => {
 
 			{/* Hero */}
 			<section className={`${styles.Hero_Container_Fluid} container-fluid`}>
-				<div className={`${styles.Hero} container`}>
+				<div className={`${styles.Hero} container p-0`}>
 					<div className={styles.Hero_Banner}>
 						<div className={styles.Hero_Title_Container}>
 							<h1 className={styles.Hero_Title} data-aos="fade-up">
@@ -118,7 +123,7 @@ const Home = () => {
 								/>
 							</Link>
 						</div>
-						<div className={`${styles.Visor_Data} col-12 col-lg-6`}>
+						<div className={`${styles.Visor_Data} col-12 col-lg-6 py-2`}>
 							<div className={styles.Visor_Data_Item} data-aos="fade-up" data-aos-delay="150">
 								<h4 className={styles.Visor_Data_Title}>
 									Tecnología
@@ -172,8 +177,8 @@ const Home = () => {
 						Brindamos la mejor experiencia interactiva por medio de Realidad Aumentada (AR), Realidad Virtual (VR) Y Realidad Mixta (MR).
 					</h3>
 
-					<div className={`${styles.ServicesCards} row py-4 py-md-5`}>
-						<div className="col-12 col-lg-6 px-0 pe-md-2 pe-lg-4">
+					<div className={`${styles.ServicesCards} row pt-4 pt-md-5 pb-0 pb-md-4`}>
+						<div className="col-12 col-lg-6 px-0 pe-lg-4 d-flex flex-column justify-content-center">
 							<div className={styles.ServiceCard} data-aos="fade-up">
 								<div className={styles.ServiceCard_Image_Container_1}>
 									<img
@@ -196,6 +201,39 @@ const Home = () => {
 										Ver más
 									</Link>
 								</div>
+								<img
+									src={DetailWhite}
+									className={styles.ServiceCard_Detail_White}
+								/>
+							</div>
+
+							<div className={`${styles.ServiceCard} d-flex d-lg-none`} data-aos="fade-up">
+								<div className={styles.ServiceCard_Image_Container_3}>
+									<img
+										src={Service2}
+										className={styles.ServiceCard_Image}
+										alt="Wireframes Planet"
+									/>
+								</div>
+								<div className={styles.ServiceCard_Text_Container}>
+									<div>
+										<h4 className={styles.ServiceCard_Title}>Realidad Aumentada</h4>
+										<p className={styles.ServiceCard_Text}>
+											Hacemos posible que un
+											elemento virtual se pueda
+											proyectar en la realidad a
+											través de un dispositivo
+											tecnológico.
+										</p>
+									</div>
+									<Link to="/servicio/realidad-aumentada" className={styles.ServiceCard_Link}>
+										Ver más
+									</Link>
+								</div>
+								<img
+									src={DetailDark}
+									className={styles.ServiceCard_Detail_Dark}
+								/>
 							</div>
 
 							<div className={styles.ServiceCard} data-aos="fade-up" data-aos-delay="250">
@@ -220,11 +258,15 @@ const Home = () => {
 										Ver más
 									</Link>
 								</div>
+								<img
+									src={DetailWhite}
+									className={styles.ServiceCard_Detail_White}
+								/>
 							</div>
 						</div>
 
-						<div className="col-12 col-lg-6 px-0 ps-md-2 ps-lg-4">
-							<div className={styles.ServiceCard} data-aos="fade-up">
+						<div className="col-12 col-lg-6 px-0 ps-lg-4 d-flex flex-column justify-content-center">
+							<div className={`${styles.ServiceCard} d-none d-lg-flex`} data-aos="fade-up">
 								<div className={styles.ServiceCard_Image_Container_3}>
 									<img
 										src={Service2}
@@ -247,6 +289,10 @@ const Home = () => {
 										Ver más
 									</Link>
 								</div>
+								<img
+									src={DetailDark}
+									className={styles.ServiceCard_Detail_Dark}
+								/>
 							</div>
 							<div className={styles.ServiceCard} data-aos="fade-up" data-aos-delay="250">
 								<div className={styles.ServiceCard_Image_Container_4}>
@@ -271,6 +317,10 @@ const Home = () => {
 										Ver más
 									</Link>
 								</div>
+								<img
+									src={DetailDark}
+									className={styles.ServiceCard_Detail_Dark}
+								/>
 							</div>
 						</div>
 					</div>
@@ -292,10 +342,39 @@ const Home = () => {
 						Lo que abarcamos en el mercado nacional / internacional.
 					</h3>
 
-					<div className="row">
+					<div className={`${styles.Sector_Card_Container} d-none d-sm-grid`}>
 						{sectors.map((sector, index) => (
-							<div key={`Sector-Card-${index}`} className='col-12 col-md-6 col-lg-4 mb-4'>
-								<div className={styles.SectorCard} data-aos="fade-up" data-aos-delay={sector.animationDelay}>
+							<div className={styles.SectorCard} key={`Sector-Card-${index}`} data-aos="fade-up" data-aos-delay={sector.animationDelay}>
+								<img
+									src={sector.image}
+									className={styles.SectorCard_Image}
+									alt={sector.title}
+								/>
+								<h4 className={styles.SectorCard_Title}>{sector.title}</h4>
+								<p className={styles.SectorCard_Description}>{sector.description}</p>
+							</div>
+						))}
+					</div>
+
+					<Swiper
+						modules={[ Navigation ]}
+						className={styles.Sector_Swiper}
+						slidesPerView={1}
+						spaceBetween={80}
+						// autoplay={{ delay: 4000, disableOnInteraction: false }}
+						navigation={{ prevEl: '.Sector_Swiper_Prev', nextEl: '.Sector_Swiper_Next' }}
+						loop={true}
+						speed={1000}
+					>
+						<div className={`${styles.Sector_Swiper_Prev} Sector_Swiper_Prev`}>
+							<img src={SwiperPrevButton}/>
+						</div>
+						<div className={`${styles.Sector_Swiper_Next} Sector_Swiper_Next`}>
+							<img src={SwiperNextButton}/>
+						</div>
+						{sectors.map((sector, index) => (
+							<SwiperSlide key={`Sector-Card-${index}`} className={styles.Sector_Slide}>
+								<div className={styles.SectorCard}>
 									<img
 										src={sector.image}
 										className={styles.SectorCard_Image}
@@ -304,9 +383,9 @@ const Home = () => {
 									<h4 className={styles.SectorCard_Title}>{sector.title}</h4>
 									<p className={styles.SectorCard_Description}>{sector.description}</p>
 								</div>
-							</div>
+							</SwiperSlide>
 						))}
-					</div>
+					</Swiper>
 
 					<Companies/>
 				</div>
@@ -331,6 +410,11 @@ const Home = () => {
 						Conversemos
 					</Link>
 				</div>
+				<img
+					src={DetailWhite}
+					className={styles.Hero_Bottom_Detail}
+					alt="Wireframes Planet"
+				/>
 			</section>
 
 			{/* Contact */}

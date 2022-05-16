@@ -82,6 +82,8 @@
   align-items: center
   color: $white
   font-size: 24px
+  &:hover
+    color: $white-dark
   img
     width: 24px
 
@@ -144,10 +146,11 @@
     text-align: left
   .Services_Links
     margin-top: 16px
-    margin-left: 20px
+    margin-left: 40px
     display: flex
     flex-direction: column
     position: static
+    overflow: unset
   .Services_Links_Hidde
     display: none
   .Service_Link
@@ -155,6 +158,13 @@
     color: $cyan-light
     &::after
       content: unset
+    &::before
+      content: url('../resources/images/menu-button-detail.png')
+      width: 5px
+      height: 5px
+      position: absolute
+      top: calc(50% - 12px)
+      left: -15px
     &:hover
       background: unset
-      color: unset
+      color: $cyan-dark

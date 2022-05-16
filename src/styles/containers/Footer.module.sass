@@ -18,6 +18,17 @@
   font-weight: 300
   font-size: 28px
 
+.Main_Data_Container
+  position: relative
+  &::after
+    content: ''
+    width: 1px
+    height: 100%
+    background: $white
+    position: absolute
+    top: 0
+    right: 30px
+
 .Data_Container
   margin: 3rem 0
   display: grid
@@ -50,3 +61,22 @@
   display: flex
   flex-direction: column
   row-gap: 20px
+
+@media (max-width: 1200px)
+  .Main_Data_Container
+    &::after
+      right: 10px
+
+@media (max-width: 992px)
+  .Main_Data_Container
+    position: relative
+    &::after
+      content: ''
+      width: 100%
+      height: 1px
+      background: $white
+      position: absolute
+      top: unset
+      bottom: 0
+      left: 0
+      right: 0

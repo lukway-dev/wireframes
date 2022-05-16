@@ -182,7 +182,7 @@ const Servicio = () => {
 			</Helmet>
 
 			<section className={`${styles.Hero_Container_Fluid} container-fluid`}>
-				<div className={`${styles.Hero} container`}>
+				<div className={`${styles.Hero} container p-0`}>
 					<div className={`${styles.Hero_Row} row`} data-aos="fade-up">
 						<div className="col-12 col-md-6">
 							<h1 className={styles.Hero_Title}>{data.title}</h1>
@@ -209,7 +209,7 @@ const Servicio = () => {
 					{data.items[1]
 						? (
 							<>
-								<div className={`${styles.Item_Card_Left} col-12 py-5`}>
+								<div className={`${styles.Item_Card_Left} col-12 pt-5 pb-0 pb-md-5 px-3 px-md-0`}>
 									<img
 										src={data.items[0].image}
 										alt={data.items[0].title}
@@ -222,7 +222,7 @@ const Servicio = () => {
 										<p className={styles.Item_Text}>{data.items[0].description}</p>
 									</div>
 								</div>
-								<div className={`${styles.Item_Card_Right} col-12 py-5`}>
+								<div className={`${styles.Item_Card_Right} col-12 pt-5 pb-3 pb-md-5 px-3 px-md-0`}>
 									<div className={styles.Item_Text_Container} data-aos="fade-up">
 										<h3 className={styles.Item_Title}>{data.items[1].title}</h3>
 										<p className={styles.Item_Text}>{data.items[1].description}</p>
@@ -236,7 +236,7 @@ const Servicio = () => {
 									/>
 								</div>
 							</>)
-						: <div className={`${styles.Item_Card_Unique} col-12 py-5`}>
+						: <div className={`${styles.Item_Card_Unique} col-12 py-5 px-3 px-md-0`}>
 							<img
 								src={data.items[0].image}
 								alt={data.items[0].title}
@@ -259,7 +259,7 @@ const Servicio = () => {
 			</section>
 
 			<section className={`${styles.Extra_Container_Fluid} container-fluid`}>
-				<div className={`${styles.Extra} container py-5`}>
+				<div className={`${styles.Extra} container py-5 px-0`}>
 					<h2 className={styles.Extra_Caption} data-aos="fade-up">
 						{data.caption} <span className={styles.Extra_Caption_Highlight}>{data.caption_highlight}</span>
 					</h2>

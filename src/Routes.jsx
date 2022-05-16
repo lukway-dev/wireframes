@@ -14,6 +14,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/bundle'
 
 const App = () => {
 	config.autoAddCss = false

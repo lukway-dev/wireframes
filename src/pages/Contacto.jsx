@@ -23,7 +23,7 @@ const Contacto = () => {
 			<section className={`${styles.Container_Fluid} container-fluid`}>
 				<div className={`${styles.Container} container`}>
 					<div className={`${styles.Row} row py-5`}>
-						<div className={`${styles.Data} col-12 col-md-6`}>
+						<div className={`${styles.Data} col-12 col-md-6 px-0`}>
 							<h1 className={styles.Title} data-aos="fade-up">
 								Contáctanos
 							</h1>
@@ -91,7 +91,7 @@ const Contacto = () => {
 								</a>
 							</div>
 						</div>
-						<div className="col-12 col-md-6">
+						<div className="col-12 col-md-6 px-0">
 							<Form/>
 						</div>
 					</div>

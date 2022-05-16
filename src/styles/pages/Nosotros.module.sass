@@ -39,6 +39,7 @@
   align-items: center
   &_Title
     margin-top: 0
+    margin-bottom: 3rem !important
     color: $magenta
     font-size: 60px
   &_Items_Container
@@ -110,6 +111,8 @@
 
 @media (max-width: 1024px)
   .Hero
+    margin-top: 80px
+    min-height: 70vh
     &_Title
       font-size: 45px
     &_Text
@@ -128,12 +131,17 @@
     &_Button
       font-size: 22px
 
+@media (max-width: 992px)
+  .Features
+    &_Image_Container
+      margin-top: 2rem !important
+      justify-content: center
+    &_Image
+      width: 70%
+      margin-left: 20% !important
+
 @media (max-width: 768px)
   .Hero
-    &_Image
-      width: 80%
-      margin-left: 20% !important
-  .Features
     &_Image
       width: 80%
       margin-left: 20% !important

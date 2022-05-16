@@ -44,7 +44,7 @@ const Header = () => {
 
 	return (
 		<header className={`${styles.Container_Fluid} container-fluid`}>
-			<div className={`${styles.Container} container`}>
+			<div className={`${styles.Container} container p-0`}>
 				<div className={styles.Logo_Container}>
 					<button className={styles.Button} onClick={toggleMenu}>
 						{isMobile

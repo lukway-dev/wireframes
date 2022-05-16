@@ -9,7 +9,7 @@ const Footer = () => {
 		<footer className={`${styles.Container_Fluid} container-fluid`}>
 			<div className="container">
 				<div className="row">
-					<div className="col-12 col-md-4 mb-5">
+					<div className={`${styles.Main_Data_Container} col-12 col-lg-4 mb-5 pb-5 pb-lg-0 ps-0`}>
 						<h5 className={styles.Title}>
               ¿Cuál es tu idea?<br/>
               Cuéntanos
@@ -73,7 +73,7 @@ const Footer = () => {
 							</a>
 						</div>
 					</div>
-					<div className="col-12 col-md-4 mb-5">
+					<div className="col-12 col-lg-4 mb-5 ps-0 ps-lg-2">
 						<h5 className={styles.Caption}>Wireframe Reality</h5>
 						<div className={styles.Links_Container}>
 							<Link to={'/portafolio'} className={styles.Link}>
@@ -87,7 +87,7 @@ const Footer = () => {
 							</Link>
 						</div>
 					</div>
-					<div className="col-12 col-md-4 mb-5">
+					<div className="col-12 col-lg-4 mb-5 px-0">
 						<h5 className={styles.Caption}>Servicios</h5>
 						<div className={styles.Links_Container}>
 							<Link to={'/servicio/realidad-virtual'} className={styles.Link}>
