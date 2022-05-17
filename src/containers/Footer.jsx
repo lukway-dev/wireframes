@@ -10,10 +10,10 @@ const Footer = () => {
 			<div className="container">
 				<div className="row">
 					<div className={`${styles.Main_Data_Container} col-12 col-lg-4 mb-5 pb-5 pb-lg-0 ps-0`}>
-						<h5 className={styles.Title}>
+						<h4 className={styles.Title}>
               ¿Cuál es tu idea?<br/>
               Cuéntanos
-						</h5>
+						</h4>
 						<div className={styles.Data_Container}>
 							<FontAwesomeIcon icon={faEnvelope}/>
 							<a className={styles.Data_Item} href="mailto:info@wireframereality.com">info@wireframereality.com</a>
@@ -28,6 +28,7 @@ const Footer = () => {
 								href="https://www.facebook.com/Wireframe-Reality-111678261391750"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label='Facebook'
 							>
 								<FontAwesomeIcon icon={faFacebookF}/>
 							</a>
@@ -36,6 +37,7 @@ const Footer = () => {
 								href="https://twitter.com/wireframe_ec"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label='Twitter'
 							>
 								<FontAwesomeIcon icon={faTwitter}/>
 							</a>
@@ -44,6 +46,7 @@ const Footer = () => {
 								href=" https://www.instagram.com/wireframereality/reels/"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label='Instagram'
 							>
 								<FontAwesomeIcon icon={faInstagram}/>
 							</a>
@@ -52,6 +55,7 @@ const Footer = () => {
 								href="https://www.tiktok.com/@wireframerealitysas"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label='Tiktok'
 							>
 								<FontAwesomeIcon icon={faTiktok}/>
 							</a>
@@ -60,6 +64,7 @@ const Footer = () => {
 								href="https://www.linkedin.com/company/wireframe-reality/"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label='Linkedin'
 							>
 								<FontAwesomeIcon icon={faLinkedinIn}/>
 							</a>
@@ -68,6 +73,7 @@ const Footer = () => {
 								href="https://www.youtube.com/channel/UCSbZ_vjG7798mOxECk_-orQ/featured"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label='Youtube'
 							>
 								<FontAwesomeIcon icon={faYoutube}/>
 							</a>

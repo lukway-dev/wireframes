@@ -187,7 +187,7 @@ const Home = () => {
 				<img
 					src={DetailWhite}
 					className={styles.Hero_Bottom_Detail}
-					alt="Wireframes Planet"
+					alt="White Detail"
 				/>
 			</section>
 
@@ -206,12 +206,16 @@ const Home = () => {
 							<div className={styles.ServiceCard} data-aos="fade-up">
 								<div className={styles.ServiceCard_Image_Container_1}>
 									<img
-										src={Service1}
 										className={styles.ServiceCard_Image}
+										src={Service1}
+										alt="Realidad Virtual"
+										title="Realidad Virtual"
 									/>
 									<img
 										className={styles.ServiceCard_Hover_Image}
 										src={ServiceHover1}
+										alt="Realidad Virtual"
+										title="Realidad Virtual"
 									/>
 								</div>
 								<div className={styles.ServiceCard_Text_Container}>
@@ -229,20 +233,25 @@ const Home = () => {
 									</Link>
 								</div>
 								<img
-									src={DetailWhite}
 									className={styles.ServiceCard_Detail_White}
+									src={DetailWhite}
+									alt="White Detail"
 								/>
 							</div>
 
 							<div className={`${styles.ServiceCard} d-flex d-lg-none`} data-aos="fade-up">
 								<div className={styles.ServiceCard_Image_Container_3}>
 									<img
-										src={Service2}
 										className={styles.ServiceCard_Image}
+										src={Service2}
+										alt="Realidad Aumentada"
+										title="Realidad Aumentada"
 									/>
 									<img
 										className={styles.ServiceCard_Hover_Image}
 										src={ServiceHover2}
+										alt="Realidad Aumentada"
+										title="Realidad Aumentada"
 									/>
 								</div>
 								<div className={styles.ServiceCard_Text_Container}>
@@ -263,18 +272,23 @@ const Home = () => {
 								<img
 									src={DetailDark}
 									className={styles.ServiceCard_Detail_Dark}
+									alt="Dark Detail"
 								/>
 							</div>
 
 							<div className={styles.ServiceCard} data-aos="fade-up" data-aos-delay="250">
 								<div className={styles.ServiceCard_Image_Container_2}>
 									<img
-										src={Service3}
 										className={styles.ServiceCard_Image}
+										src={Service3}
+										alt="Experiencias 3D en la Web"
+										title="Experiencias 3D en la Web"
 									/>
 									<img
 										className={styles.ServiceCard_Hover_Image}
 										src={ServiceHover3}
+										alt="Experiencias 3D en la Web"
+										title="Experiencias 3D en la Web"
 									/>
 								</div>
 								<div className={styles.ServiceCard_Text_Container}>
@@ -294,6 +308,7 @@ const Home = () => {
 								<img
 									src={DetailWhite}
 									className={styles.ServiceCard_Detail_White}
+									alt="White Detail"
 								/>
 							</div>
 						</div>
@@ -302,12 +317,16 @@ const Home = () => {
 							<div className={`${styles.ServiceCard} d-none d-lg-flex`} data-aos="fade-up">
 								<div className={styles.ServiceCard_Image_Container_3}>
 									<img
-										src={Service2}
 										className={styles.ServiceCard_Image}
+										src={Service2}
+										alt="Realidad Aumentada"
+										title="Realidad Aumentada"
 									/>
 									<img
 										className={styles.ServiceCard_Hover_Image}
 										src={ServiceHover2}
+										alt="Realidad Aumentada"
+										title="Realidad Aumentada"
 									/>
 								</div>
 								<div className={styles.ServiceCard_Text_Container}>
@@ -326,8 +345,9 @@ const Home = () => {
 									</Link>
 								</div>
 								<img
-									src={DetailDark}
 									className={styles.ServiceCard_Detail_Dark}
+									src={DetailDark}
+									alt="Dark Detail"
 								/>
 							</div>
 							<div className={styles.ServiceCard} data-aos="fade-up" data-aos-delay="250">
@@ -335,10 +355,14 @@ const Home = () => {
 									<img
 										src={Service4}
 										className={styles.ServiceCard_Image}
+										alt="Metaverso"
+										title="Metaverso"
 									/>
 									<img
 										className={styles.ServiceCard_Hover_Image}
 										src={ServiceHover4}
+										alt="Metaverso"
+										title="Metaverso"
 									/>
 								</div>
 								<div className={styles.ServiceCard_Text_Container}>
@@ -357,8 +381,9 @@ const Home = () => {
 									</Link>
 								</div>
 								<img
-									src={DetailDark}
 									className={styles.ServiceCard_Detail_Dark}
+									src={DetailDark}
+									alt="Dark Detail"
 								/>
 							</div>
 						</div>
@@ -367,7 +392,7 @@ const Home = () => {
 				<img
 					src={DetailCyan}
 					className={styles.Hero_Bottom_Detail}
-					alt="Wireframes Planet"
+					alt="Cyan Detail"
 				/>
 			</section>
 
@@ -388,6 +413,7 @@ const Home = () => {
 									src={sector.image}
 									className={styles.SectorCard_Image}
 									alt={sector.title}
+									title={sector.title}
 								/>
 								<h4 className={styles.SectorCard_Title}>{sector.title}</h4>
 								<p className={styles.SectorCard_Description}>{sector.description}</p>
@@ -406,10 +432,10 @@ const Home = () => {
 						speed={1000}
 					>
 						<div className={`${styles.Sector_Swiper_Prev} Sector_Swiper_Prev`}>
-							<img src={SwiperPrevButton}/>
+							<img src={SwiperPrevButton} alt="Previus Sector"/>
 						</div>
 						<div className={`${styles.Sector_Swiper_Next} Sector_Swiper_Next`}>
-							<img src={SwiperNextButton}/>
+							<img src={SwiperNextButton} alt="Next Sector"/>
 						</div>
 						{sectors.map((sector, index) => (
 							<SwiperSlide key={`Sector-Card-${index}`} className={styles.Sector_Slide}>
@@ -418,6 +444,7 @@ const Home = () => {
 										src={sector.image}
 										className={styles.SectorCard_Image}
 										alt={sector.title}
+										title={sector.title}
 									/>
 									<h4 className={styles.SectorCard_Title}>{sector.title}</h4>
 									<p className={styles.SectorCard_Description}>{sector.description}</p>
@@ -433,9 +460,10 @@ const Home = () => {
 			{/* Idea */}
 			<section className={styles.Idea}>
 				<img
-					src={Lampara}
 					className={styles.Idea_Image}
+					src={Lampara}
 					width={250}
+					alt="¿Tienes una idea brillante?"
 				/>
 				<div className={styles.Idea_Text_Container}>
 					<h2 className={styles.Idea_Title} data-aos="fade-up">
@@ -452,7 +480,7 @@ const Home = () => {
 				<img
 					src={DetailWhite}
 					className={styles.Hero_Bottom_Detail}
-					alt="Wireframes Planet"
+					alt="White Detail"
 				/>
 			</section>
 

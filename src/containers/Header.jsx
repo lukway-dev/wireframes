@@ -46,7 +46,7 @@ const Header = () => {
 		<header className={`${styles.Container_Fluid} container-fluid`}>
 			<div className={`${styles.Container} container p-0`}>
 				<div className={styles.Logo_Container}>
-					<button className={styles.Button} onClick={toggleMenu}>
+					<button className={styles.Button} onClick={toggleMenu} aria-label="Go to Home">
 						{isMobile
 							?	showMenu
 								? <img src={XIcon}/>
