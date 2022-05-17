@@ -1,9 +1,10 @@
-import { useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper'
+import { gsap } from 'gsap'
 import Companies from '../components/Companies'
 import Form from '../components/Form'
 import styles from '../styles/pages/Home.module.sass'
@@ -13,6 +14,10 @@ import Service1 from '../assets/services/service-1.png'
 import Service2 from '../assets/services/service-2.png'
 import Service3 from '../assets/services/service-3.png'
 import Service4 from '../assets/services/service-4.png'
+import ServiceHover1 from '../assets/services/service-1-hover.png'
+import ServiceHover2 from '../assets/services/service-2-hover.png'
+import ServiceHover3 from '../assets/services/service-3-hover.png'
+import ServiceHover4 from '../assets/services/service-4-hover.png'
 import Sector1 from '../assets/sectors/sector-1.png'
 import Sector2 from '../assets/sectors/sector-2.png'
 import Sector3 from '../assets/sectors/sector-3.png'
@@ -27,6 +32,8 @@ import SwiperPrevButton from '../assets/details/swiper-left.svg'
 import SwiperNextButton from '../assets/details/swiper-right.svg'
 
 const Home = () => {
+	const [ title, setTitle ] = useState(0)
+	const titleRef = useRef(null)
 	const { pathname } = useLocation()
 
 	const sectors = [
@@ -74,10 +81,27 @@ const Home = () => {
 			animationDelay: 450
 		},
 	]
+	const titles = ['Metaverso', 'Realidad Virtual', 'Realidad Aumentada', 'Experiencias Web']
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	}, [pathname])
+
+	useEffect(() => {
+		if(titleRef.current) {
+			setTimeout(() => {
+				gsap.fromTo(titleRef.current, {opacity: 0}, {opacity: 1, duration: 1})
+				gsap.fromTo(titleRef.current, {opacity: 1}, {opacity: 0, duration: 1, delay: 3})
+
+				if(title === 3) {
+					setTitle(0)
+				}
+				else {
+					setTitle(title + 1)
+				}
+			}, [4000])
+		}
+	}, [titleRef, title])
 
 	return (
 		<main>
@@ -91,7 +115,7 @@ const Home = () => {
 					<div className={styles.Hero_Banner}>
 						<div className={styles.Hero_Title_Container}>
 							<h1 className={styles.Hero_Title} data-aos="fade-up">
-								Realidad Virtual y Realidad Aumentada
+								Servicios de <br/><span className={styles.Hero_Title_Variable} ref={titleRef}>{titles[title]}</span>
 							</h1>
 							<h3 className={styles.Hero_Caption} data-aos="fade-up" data-aos-delay="250">
 								Un nuevo mundo de <span className={styles.Hero_Caption_Highlight}>soluciones digitales</span>
@@ -184,7 +208,10 @@ const Home = () => {
 									<img
 										src={Service1}
 										className={styles.ServiceCard_Image}
-										alt="Wireframes Planet"
+									/>
+									<img
+										className={styles.ServiceCard_Hover_Image}
+										src={ServiceHover1}
 									/>
 								</div>
 								<div className={styles.ServiceCard_Text_Container}>
@@ -212,7 +239,10 @@ const Home = () => {
 									<img
 										src={Service2}
 										className={styles.ServiceCard_Image}
-										alt="Wireframes Planet"
+									/>
+									<img
+										className={styles.ServiceCard_Hover_Image}
+										src={ServiceHover2}
 									/>
 								</div>
 								<div className={styles.ServiceCard_Text_Container}>
@@ -241,7 +271,10 @@ const Home = () => {
 									<img
 										src={Service3}
 										className={styles.ServiceCard_Image}
-										alt="Wireframes Planet"
+									/>
+									<img
+										className={styles.ServiceCard_Hover_Image}
+										src={ServiceHover3}
 									/>
 								</div>
 								<div className={styles.ServiceCard_Text_Container}>
@@ -271,7 +304,10 @@ const Home = () => {
 									<img
 										src={Service2}
 										className={styles.ServiceCard_Image}
-										alt="Wireframes Planet"
+									/>
+									<img
+										className={styles.ServiceCard_Hover_Image}
+										src={ServiceHover2}
 									/>
 								</div>
 								<div className={styles.ServiceCard_Text_Container}>
@@ -299,7 +335,10 @@ const Home = () => {
 									<img
 										src={Service4}
 										className={styles.ServiceCard_Image}
-										alt="Wireframes Planet"
+									/>
+									<img
+										className={styles.ServiceCard_Hover_Image}
+										src={ServiceHover4}
 									/>
 								</div>
 								<div className={styles.ServiceCard_Text_Container}>
