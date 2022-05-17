@@ -37,6 +37,8 @@ const Contacto = () => {
 								<a className={styles.Data_Item} href="mailto:info@wireframereality.com">info@wireframereality.com</a>
 								<FontAwesomeIcon icon={faPhone}/>
 								<a className={styles.Data_Item} href="tel:+0984886441">0984886441</a>
+								<FontAwesomeIcon icon={faPhone}/>
+								<a className={styles.Data_Item} href="tel:+593 4-504-5717">593 4-504-5717</a>
 								<FontAwesomeIcon icon={faLocationDot}/>
 								<span className={styles.Data_Item}>Oficina 703 Piso 7 - City Office</span>
 							</div>
