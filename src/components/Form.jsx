@@ -1,20 +1,51 @@
+import { useEffect, useRef } from 'react'
+import emailjs from '@emailjs/browser'
+import ReCAPTCHA from 'react-google-recaptcha'
 import styles from '../styles/components/Form.module.sass'
 
 const Form = () => {
+	const form = useRef()
+	const recaptcha = useRef()
+
+	const sendEmail = async (e) => {
+		e.preventDefault()
+
+		try {
+			const result = await emailjs.sendForm('service_o0xi85j', 'template_3is6jf4', form.current, 'w9iypXOq-1iYndKCd')
+			console.log(result)
+		} catch (error) {
+			console.error(error)
+		}
+
+		window.location.reload()
+	}
+
+	useEffect(() => {
+		setTimeout(() => {
+			const recaptcha = document.querySelector('#g-recaptcha-response')
+
+			if(recaptcha) {
+				recaptcha.setAttribute('required', 'required')
+			}
+		}, 1000)
+	}, [recaptcha])
+
 	return (
-		<form method="post" id="form" className={styles.Form} data-aos="fade-up">
+		<form method="post" id="form" className={styles.Form} data-aos="fade-up" ref={form} onSubmit={(e) => sendEmail(e)}>
 			<div className={styles.Input_Double}>
 				<input
 					className={styles.Input}
 					type="text"
-					name="first-name"
+					name="first_name"
 					placeholder='Nombre'
+					maxLength={200}
 					required/>
 				<input
 					className={styles.Input}
 					type="text"
-					name="last-name"
+					name="last_name"
 					placeholder='Apellido'
+					maxLength={200}
 					required/>
 			</div>
 			<div className={styles.Input_Double}>
@@ -23,7 +54,9 @@ const Form = () => {
 					type="email"
 					name="email"
 					placeholder='Correo'
-					required/>
+					maxLength={100}
+					required
+				/>
 				<input
 					className={styles.Input}
 					type="tel"
@@ -35,30 +68,45 @@ const Form = () => {
 					className={styles.Input}
 					type="text"
 					name="job"
-					placeholder='Profesión/área de trabajo'/>
+					placeholder='Profesión/área de trabajo'
+					maxLength={100}
+				/>
 				<input
 					className={styles.Input}
 					type="text"
-					name="ciudad"
-					placeholder='Ciudad/región'/>
+					name="city"
+					placeholder='Ciudad/región'
+					maxLength={100}
+				/>
 			</div>
 			<div className={styles.Input_Single}>
 				<input
 					className={styles.Input}
 					type="text"
-					name="question"
-					placeholder='¿Cómo podríamos ayudarte?'/>
+					name="subject"
+					placeholder='¿Cómo podríamos ayudarte?'
+					maxLength={200}
+					required
+				/>
 			</div>
 			<div className={styles.Input_Single}>
 				<textarea
 					className={styles.Textarea}
 					type="text"
-					name="idea"
+					name="message"
 					placeholder='Escribe brevemente acerca de tu proyecto o idea'
 					rows={4}
 					maxLength={500}
+					required
 				>
 				</textarea>
+			</div>
+
+			<div className={`${styles.Recaptcha} d-flex justify-content-center`}>
+				<ReCAPTCHA
+					ref={recaptcha}
+					sitekey="6LeDEgMgAAAAAIOclB0p9hHV5Z35GP7IqkgKb1rO"
+				/>
 			</div>
 
 			<button type="submit" className={styles.Button}>Enviar</button>
