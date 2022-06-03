@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { useLocation } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import { useParams } from 'react-router-dom'
@@ -21,9 +21,11 @@ import DetailWhite from '../assets/details/bottom-detail.svg'
 import DetailCyan from '../assets/details/bottom-detail-cyan.svg'
 import styles from '../styles/pages/Servicios.module.sass'
 import Companies from '../components/Companies'
+import { AppContext } from '../context/AppContext'
 
 const Servicio = () => {
 	const [data, setData] = useState('')
+	const { language } = useContext(AppContext)
 	const { service } = useParams()
 	const { pathname } = useLocation()
 
@@ -115,31 +117,146 @@ const Servicio = () => {
 			]
 		}, {
 			title: 'Servicios de Metaverso',
-			description: 'Creamos contenido interactivo 3D para visualizarse desde una página web.',
+			description: 'Creamos, desarrollamos e implementamos ambientes virtuales interactivos y optimizados.',
 			title_image: Service4,
 			title_image_width: 280,
 			title_image_height: 175,
 			items: [
 				{
-					title: 'Experiencia Web 3D de productos',
-					description: 'Diseños 3D que permiten a los usuarios ver cuál es el aspecto de su próxima adquisición desde una página web, mostrando detalles como sus medidas, características, y modo de uso.',
+					title: 'Ambientes Virtuales Interactivos',
+					description: 'Diseño de ambientes virtuales, en el cual los usuarios podrán navegar e interactuar desde un ordenador o dispositivo móvil.',
 					image: Service4Item1,
 				}, {
-					title: 'Experiencia Web 3D para espacios',
-					description: 'Espacios 3D creados con el objetivo de que el usuario pueda recorrer, experimentar y personalizar el espacio acorde a sus necesidades.',
+					title: 'Ambientes Virtuales Comerciales',
+					description: 'Diseño de ambientes virtuales, en el cual los usuarios podrán navegar y comercializar productos tangibles o no tangibles desde un ordenador o dispositivo móvil.',
 					image: Service4Item2,
 				}
 			],
-			caption: '¿Por que implementar las',
+			caption: '¿Por que implementar',
 			caption_highlight: 'El Metaverso?',
 			caption_image: Service4CaptionImage,
 			caption_items: [
 				{
-					text: 'Permite dar a conocer tus productos, sin la necesidad de desplazarse a un espacio físico.'
+					text: 'Tienes la disposición de crear tu propio mundo, tu propio universo.'
 				}, {
-					text: 'Permite a los usuarios conocer e interactuar con el producto de una forma más cercana a la realidad.'
+					text: 'Puedes crear un ambiente optimizado, en el cual organizar reuniones digitales y  conocer personas de todos los rincones del planeta.'
 				}, {
-					text: 'Brinda una experiencia 3D sin la necesidad de descargar una aplicación.'
+					text: 'Permite desarrollar un ambiente en el cual puedas realizar actividades comerciales, presentaciones o streamings con tu avatar.'
+				}
+			]
+		}
+	]
+	const servicesEn = [
+		{
+			title: 'Virtual Reality',
+			description: 'We remake three-dimensional environments, where the user can experience through the use of VR glasses',
+			title_image: Service1,
+			title_image_width: 245,
+			title_image_height: 266,
+			items: [
+				{
+					title: 'VR for architecture and construction',
+					description: 'We designed a virtual showroom, which will allow you to show your clients the architectural spaces before their acquisition, and even before they are built.',
+					image: Service1Item1,
+				}, {
+					title: 'VR for trainings',
+					description: 'Train your staff with immersive experiences that will allow them to learn and understand some processes interactively without the need to be physically present.',
+					image: Service1Item2,
+				}
+			],
+			caption: 'Why implement',
+			caption_highlight: 'Virtual Reality?',
+			caption_image: Service1CaptionImage,
+			caption_items: [
+				{
+					text: 'It allows us to recreate spaces in a digital environment, generating interaction and activities that the user experiences as in real life.'
+				}, {
+					text: 'A direct impact will be generated on the user, thanks to the unique and immersive experience that will remain etched in their memory.'
+				}, {
+					text: 'It is a virtual experience that gives you the freedom to create the most utopian spaces you can imagine, there is no limit to creativity.'
+				}
+			]
+		}, {
+			title: 'Augmented Reality',
+			description: 'We add virtual elements to our reality that can be viewed through the camera of mobile devices.',
+			title_image: Service2,
+			title_image_width: 250,
+			title_image_height: 265,
+			items: [
+				{
+					title: 'AR for retail',
+					description: 'Let the user know your products as a real-size 3D model within the environment before they are purchased.',
+					image: Service2Item1,
+				}
+			],
+			caption: 'Why implement',
+			caption_highlight: 'Augmented Reality?',
+			caption_image: Service2CaptionImage,
+			caption_items: [
+				{
+					text: 'It allows users to access the product display interactively without having to go to the point of sale.'
+				}, {
+					text: 'It allows users to verify complementary information about the product in a dynamic way.'
+				}, {
+					text: 'It allows you to add objects to our reality to transmit the message you want.'
+				}
+			]
+		}, {
+			title: '3D Web Experiences',
+			description: 'We create 3D interactive content to be viewed from a web page.',
+			title_image: Service3,
+			title_image_width: 250,
+			title_image_height: 195,
+			items: [
+				{
+					title: '3D web experience for products',
+					description: '3D designs that allow users to see what their next acquisition will look like from a web page, showing details such as its measurements, characteristics, and mode of use.',
+					image: Service3Item1,
+				}, {
+					title: '3D web experience for spaces',
+					description: '3D spaces created with the aim that the user can explore, experience and customize the space according to their needs.',
+					image: Service3Item2,
+				}
+			],
+			caption: 'Why implement',
+			caption_highlight: '3D Web Experiences?',
+			caption_image: Service3CaptionImage,
+			caption_items: [
+				{
+					text: 'It allows you to publicize your products, without the need to travel to a physical space.'
+				}, {
+					text: 'It allows users to get to know and interact with the product in a way that is closer to reality.'
+				}, {
+					text: 'Provides a 3D experience without the need to download an app.'
+				}
+			]
+		}, {
+			title: 'Metaverse Services',
+			description: 'We create, develop and implement interactive and optimized virtual environments.',
+			title_image: Service4,
+			title_image_width: 280,
+			title_image_height: 175,
+			items: [
+				{
+					title: 'Interactive Virtual Environments',
+					description: 'Design of virtual environments, in which users can navigate and interact from a computer or mobile device.',
+					image: Service4Item1,
+				}, {
+					title: 'Commercial Virtual Environments',
+					description: 'Design of virtual environments, in which users can browse and market tangible or non-tangible products from a computer or mobile device.',
+					image: Service4Item2,
+				}
+			],
+			caption: 'Why implement ',
+			caption_highlight: 'the Metaverse?',
+			caption_image: Service4CaptionImage,
+			caption_items: [
+				{
+					text: 'You have the disposition to create your own world, your own universe.'
+				}, {
+					text: 'You can create an optimized environment, in which to organize digital meetings and meet people from all corners of the planet.'
+				}, {
+					text: 'It allows you to develop an environment in which you can carry out commercial activities, presentations or streaming with your avatar.'
 				}
 			]
 		}
@@ -166,7 +283,11 @@ const Servicio = () => {
 			break
 		}
 
-		setData(services[index])
+		if(language === 'es') {
+			setData(services[index])
+		} else {
+			setData(servicesEn[index])
+		}
 	}, [service])
 
 	useEffect(() => {
@@ -178,7 +299,7 @@ const Servicio = () => {
 	return (
 		<main>
 			<Helmet>
-				<title>Servicios | Wireframe Reality</title>
+				<title>{language === 'es' ? 'Servicios' : 'Service'} | Wireframe Reality</title>
 			</Helmet>
 
 			<section className={`${styles.Hero_Container_Fluid} container-fluid`}>

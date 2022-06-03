@@ -6,10 +6,8 @@
   align-items: center
 
 .Title_Container
-  width: max-content
-  min-width: 148px
   height: 100%
-  margin-right: 50px
+  margin-right: 60px
   display: flex
   justify-content: flex-start
   align-items: center
@@ -18,7 +16,7 @@
     content: ""
     position: absolute
     top: 0
-    right: -20px
+    right: -30px
     width: 2px
     height: 100%
     background-color: $cyan-light
@@ -27,7 +25,7 @@
   color: $white
   font-family: 'Font-Bold', sans-serif
   font-size: 20px
-  text-align: left
+  text-align: right
   text-transform: uppercase
 
 .Images_Container
@@ -65,13 +63,15 @@
 @media (max-width: 768px)
   .Container
     height: 100px
+  .Title_Container
+    width: fit-content
+    margin-right: 40px
+    &::after
+      right: -20px
   .Title
     font-size: 14px
 
 @media (max-width: 576px)
-  .Title_Container
-    width: max-content
-    min-width: 100px
   .Title
     font-size: 12px
 

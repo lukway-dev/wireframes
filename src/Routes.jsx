@@ -15,6 +15,7 @@ import 'aos/dist/aos.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/bundle'
+import AppContextProvider from './context/AppContext.js'
 
 const App = () => {
 	config.autoAddCss = false
@@ -28,17 +29,19 @@ const App = () => {
 	}, [])
 
 	return (
-		<BrowserRouter>
-			<Layout>
-				<Routes>
-					<Route path="/" element={<Home/>}/>
-					<Route path="/servicio/:service" element={<Servicio/>}/>
-					<Route path="/portafolio" element={<Portafolio/>}/>
-					<Route path="/nosotros" element={<Nosotros/>}/>
-					<Route path="/contacto" element={<Contacto/>}/>
-				</Routes>
-			</Layout>
-		</BrowserRouter>
+		<AppContextProvider>
+			<BrowserRouter>
+				<Layout>
+					<Routes>
+						<Route path="/" element={<Home/>}/>
+						<Route path="/servicio/:service" element={<Servicio/>}/>
+						<Route path="/portafolio" element={<Portafolio/>}/>
+						<Route path="/nosotros" element={<Nosotros/>}/>
+						<Route path="/contacto" element={<Contacto/>}/>
+					</Routes>
+				</Layout>
+			</BrowserRouter>
+		</AppContextProvider>
 	)
 }
 

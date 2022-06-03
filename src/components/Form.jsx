@@ -1,9 +1,11 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useContext } from 'react'
 import emailjs from '@emailjs/browser'
 import ReCAPTCHA from 'react-google-recaptcha'
+import { AppContext } from '../context/AppContext'
 import styles from '../styles/components/Form.module.sass'
 
 const Form = () => {
+	const { language } = useContext(AppContext)
 	const form = useRef()
 	const recaptcha = useRef()
 
@@ -30,7 +32,7 @@ const Form = () => {
 		}, 1000)
 	}, [recaptcha])
 
-	return (
+	if (language === 'es') return (
 		<form method="post" id="form" className={styles.Form} data-aos="fade-up" ref={form} onSubmit={(e) => sendEmail(e)}>
 			<div className={styles.Input_Double}>
 				<input
@@ -61,21 +63,21 @@ const Form = () => {
 					className={styles.Input}
 					type="tel"
 					name="phone"
-					placeholder='Teléfono'/>
+					placeholder='Teléfono*'/>
 			</div>
 			<div className={styles.Input_Double}>
 				<input
 					className={styles.Input}
 					type="text"
 					name="job"
-					placeholder='Profesión/área de trabajo'
+					placeholder='Profesión/área de trabajo*'
 					maxLength={100}
 				/>
 				<input
 					className={styles.Input}
 					type="text"
 					name="city"
-					placeholder='Ciudad/región'
+					placeholder='Ciudad/región*'
 					maxLength={100}
 				/>
 			</div>
@@ -110,6 +112,90 @@ const Form = () => {
 			</div>
 
 			<button type="submit" className={styles.Button}>Enviar</button>
+		</form>
+	)
+
+	return (
+		<form method="post" id="form" className={styles.Form} data-aos="fade-up" ref={form} onSubmit={(e) => sendEmail(e)}>
+			<div className={styles.Input_Double}>
+				<input
+					className={styles.Input}
+					type="text"
+					name="first_name"
+					placeholder='Name'
+					maxLength={200}
+					required/>
+				<input
+					className={styles.Input}
+					type="text"
+					name="last_name"
+					placeholder='Surname'
+					maxLength={200}
+					required/>
+			</div>
+			<div className={styles.Input_Double}>
+				<input
+					className={styles.Input}
+					type="email"
+					name="email"
+					placeholder='Email'
+					maxLength={100}
+					required
+				/>
+				<input
+					className={styles.Input}
+					type="tel"
+					name="phone"
+					placeholder='Phone*'/>
+			</div>
+			<div className={styles.Input_Double}>
+				<input
+					className={styles.Input}
+					type="text"
+					name="job"
+					placeholder='Profession/work  area*'
+					maxLength={100}
+				/>
+				<input
+					className={styles.Input}
+					type="text"
+					name="city"
+					placeholder='City/región*'
+					maxLength={100}
+				/>
+			</div>
+			<div className={styles.Input_Single}>
+				<input
+					className={styles.Input}
+					type="text"
+					name="subject"
+					placeholder='How can we help you?'
+					maxLength={200}
+					required
+				/>
+			</div>
+			<div className={styles.Input_Single}>
+				<textarea
+					className={styles.Textarea}
+					type="text"
+					name="message"
+					placeholder='Write briefly about your project or idea'
+					rows={4}
+					maxLength={500}
+					required
+				>
+				</textarea>
+			</div>
+
+			<div className={`${styles.Recaptcha} d-flex justify-content-center`}>
+				<ReCAPTCHA
+					ref={recaptcha}
+					sitekey="6LeDEgMgAAAAAIOclB0p9hHV5Z35GP7IqkgKb1rO"
+					lang='en'
+				/>
+			</div>
+
+			<button type="submit" className={styles.Button}>Send</button>
 		</form>
 	)
 }

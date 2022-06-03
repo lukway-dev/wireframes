@@ -251,18 +251,21 @@
     font-weight: 300
 
 .SectorCard
+  width: 100%
   height: 100%
   border: 1px solid $cyan-light
   border-radius: 5px
   padding: 20px
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4)
-  display: flex
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: auto auto auto
   flex-direction: column
-  justify-content: space-between
-  align-items: center
+  justify-items: center
+  align-items: flex-start
   color: $white
   p
-    margin-bottom: 0
+    margin: 34px 0 0
   &_Image
     width: 40%
   &_Title
@@ -290,6 +293,8 @@
   right: 10px
 .Sector_Slide
   height: 300px !important
+  display: flex
+  justify-content: center
 
 
 // Idea
@@ -506,8 +511,12 @@
       margin-bottom: 50px
       font-size: 20px
   .SectorCard
+    aspect-ratio: 19 /  17
+    width: unset
     &_Image
       width: 40%
+    p
+      margin-top: 20px
   .Sector_Swiper
     display: block
   .Idea
