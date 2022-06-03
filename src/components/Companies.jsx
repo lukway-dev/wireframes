@@ -85,7 +85,7 @@ const Companies = () => {
 		<div className={styles.Container} data-aos="fade-up">
 			<div className={styles.Title_Container}>
 				<p className={styles.Title}>
-          Companies<br/>that<br/>believe<br/>on us
+          Companies<br/>that believe<br/>on us
 				</p>
 			</div>
 			<Swiper

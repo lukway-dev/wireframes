@@ -16,7 +16,7 @@ import styles from '../styles/pages/Portafolio.module.sass'
 
 const Portafolio = () => {
 	const { pathname } = useLocation()
-	const { languages } = useContext(AppContext)
+	const { language } = useContext(AppContext)
 
 	const projects = [
 		{
@@ -119,7 +119,7 @@ const Portafolio = () => {
 		window.scrollTo(0, 0)
 	}, [pathname])
 
-	if (languages) return (
+	if (language === 'es') return (
 		<main className={styles.main}>
 			<Helmet>
 				<title>Portafolio | Wireframe Reality</title>
@@ -190,7 +190,7 @@ const Portafolio = () => {
 				<div className={`${styles.Project_Cards_Container} row`}>
 					{projectsEn.map((project, index) => {
 						if(project.link) return (
-							<a key={`Project-Card-${index}`} className="col-12 col-sm-6 col-md-4 p-0" href={project.link}>
+							<a className={`${styles.Project_Card_Link} col-12 col-sm-6 col-md-4 p-0`} key={`Project-Card-${index}`} href={project.link}>
 								<div className={styles.Project_Card} data-aos="zoom-in">
 									<img
 										className={styles.Project_Image}
