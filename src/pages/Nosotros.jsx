@@ -35,7 +35,7 @@ const Nosotros = () => {
 								data-aos="zoom-in"
 							/>
 						</div>
-						<div className="col-12 col-md-5 p-md-0">
+						<div className="col-12 col-md-5 px-4 p-md-0">
 							<h1 className={styles.Hero_Title} data-aos="fade-up">Nosotros</h1>
 							<p className={styles.Hero_Text} data-aos="fade-up" data-aos-delay="150">
 								Somos un equipo especializado en brindar soluciones por medio de
@@ -61,21 +61,21 @@ const Nosotros = () => {
 							<div className={styles.Features_Items_Container}>
 								<div className={styles.Features_Item} data-aos="fade-up">
 									<p className={styles.Features_Text}>
-										<span className={styles.Features_Text_Magenta}>La calidad </span>
+										<span className={styles.Features_Text_Magenta}>La calidad, </span>
 										nuestros colaboradores y representantes manejan un alto nivel de
 										compromiso y profesionalismo, para brindarte lo mejor de lo mejor.
 									</p>
 								</div>
 								<div className={styles.Features_Item} data-aos="fade-up" data-aos-delay="150">
 									<p className={styles.Features_Text}>
-										<span className={styles.Features_Text_Cyan}>La optimización </span>
+										<span className={styles.Features_Text_Cyan}>La optimización, </span>
 										nuestro equipo conoce los métodos y herramientas para que un buen
 										proyecto sea ligero y de fácil acceso.
 									</p>
 								</div>
 								<div className={styles.Features_Item} data-aos="fade-up" data-aos-delay="300">
 									<p className={styles.Features_Text}>
-										<span className={styles.Features_Text_Orange}>La comunicación </span>
+										<span className={styles.Features_Text_Orange}>La comunicación, </span>
 										nuestro objetivo es mantener un buen ambiente laboral con nuestros
 										clientes y colaboradores, por medio de la empatía y la educación.
 									</p>
@@ -152,9 +152,9 @@ const Nosotros = () => {
 						<div className="col-12 col-md-5 p-md-0">
 							<h1 className={styles.Hero_Title} data-aos="fade-up">About us</h1>
 							<p className={styles.Hero_Text} data-aos="fade-up" data-aos-delay="150">
-								We are a team specialized in providing solutions through
-								WebXR technologies to provide a new experience by making
-								your products or services have better positioning in the market.
+							We are a team specialized in providing solutions through WebXR technologies
+							to bring a new experience making your products or services have better
+							positioning in the market.
 							</p>
 						</div>
 					</div>
@@ -171,27 +171,27 @@ const Nosotros = () => {
 				<div className={`${styles.Features} container p-0`}>
 					<div className="row h-100 flex-column-reverse flex-lg-row justify-content-between">
 						<div className={`${styles.Features_Text_Container} col-12 col-lg-5`}>
-							<h2 className={styles.Features_Title} data-aos="fade-up">That make us different</h2>
+							<h2 className={styles.Features_Title} data-aos="fade-up">Benefits of working with us</h2>
 							<div className={styles.Features_Items_Container}>
 								<div className={styles.Features_Item} data-aos="fade-up">
 									<p className={styles.Features_Text}>
-										<span className={styles.Features_Text_Magenta}>The quality </span>
+										<span className={styles.Features_Text_Magenta}>Quality, </span>
 										our collaborators and representatives handle a high level of
-										commitment and professionalism, to offer you the best of the best.
+										commitment and professionalism, to give you the best of the best.
 									</p>
 								</div>
 								<div className={styles.Features_Item} data-aos="fade-up" data-aos-delay="150">
 									<p className={styles.Features_Text}>
-										<span className={styles.Features_Text_Cyan}>Optimization </span>
-										our team knows the methods and tools so that a good
-										project is light and easily accessible.
+										<span className={styles.Features_Text_Cyan}>Optimization, </span>
+										our team knows the methods and tools to make a good
+										project light and easy to access.
 									</p>
 								</div>
 								<div className={styles.Features_Item} data-aos="fade-up" data-aos-delay="300">
 									<p className={styles.Features_Text}>
-										<span className={styles.Features_Text_Orange}>The communication </span>
-										our goal is to maintain a good working environment with our
-										clients and collaborators, through empathy and education.
+										<span className={styles.Features_Text_Orange}>Communication, </span>
+										our goal is to maintain a good working environment with
+										our clients and collaborators, through empathy and education.
 									</p>
 								</div>
 							</div>
@@ -229,10 +229,11 @@ const Nosotros = () => {
 						</div>
 						<div className="col-12 col-lg-6 px-0">
 							<div className={styles.Work_Text_Container}>
-								<h2 className={styles.Work_Title} data-aos="fade-up">Join the team</h2>
+								<h2 className={styles.Work_Title} data-aos="fade-up">Join us</h2>
 								<p className={styles.Work_Text} data-aos="fade-up" data-aos-delay="150">
-									We are looking for creators, passionate, and without fear of constant challenges.
-									If you are creative, love to work in a team and never stop learning:
+								We are looking for passionate, creative people who are not afraid
+								of constant challenges. If you are creative, like to work in a
+								team and never stop learning:
 								</p>
 								<a className={styles.Work_Button} href="mailto:info@wireframereality.com" data-aos="fade-up" data-aos-delay="150">
 									Send your cv

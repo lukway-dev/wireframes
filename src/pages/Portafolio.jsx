@@ -74,27 +74,27 @@ const Portafolio = () => {
 			link: 'https://wireframereality.com/Verge3D/studio_apartment/'
 		}, {
 			title: 'Streaming Room',
-			topic: 'Metaverse',
+			topic: 'Metaverse Services',
 			image: Project2,
 			link: ''
 		}, {
 			title: 'Green Filters',
-			topic: 'Web Experiencies',
+			topic: '3D Web Experiencies',
 			image: Project3,
 			link: ''
 		}, {
 			title: 'Blue Moon',
-			topic: 'Metaverse',
+			topic: 'Metaverse Services',
 			image: Project4,
 			link: ''
 		}, {
 			title: 'Bill & Melinda Gates Foundation',
-			topic: 'Metaverse',
+			topic: 'Metaverse Services',
 			image: Project5,
 			link: ''
 		}, {
 			title: 'One Laptop Per Kid',
-			topic: 'Web Experiencies',
+			topic: '3D Web Experiencies',
 			image: Project6,
 			link: ''
 		}, {
@@ -104,12 +104,12 @@ const Portafolio = () => {
 			link: ''
 		}, {
 			title: 'Furniture Configurator',
-			topic: 'Web Experiencies',
+			topic: '3D Web Experiencies',
 			image: Project8,
 			link: 'https://wireframereality.com/Verge3D/furniture_configurator_v2/'
 		}, {
 			title: 'Syringe Assenbly Simulation',
-			topic: 'Web Experiencies',
+			topic: '3D Web Experiencies',
 			image: Project9,
 			link: 'https://wireframereality.com/Verge3D/lab_simulation/'
 		}

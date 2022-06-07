@@ -21,7 +21,7 @@
   &_Title_Container
     width: 60%
   &_Title
-    margin: 0 0 20px
+    margin: 0
     color: $cyan
     font-family: 'Font-Condensed-Bold', sans-serif
     font-size: 90px
@@ -31,7 +31,7 @@
     margin: 0
     color: $gray
     font-family: 'Font-Condensed-Regular', sans-serif
-    font-size: 30px
+    font-size: 36px
     font-weight: 300
     &_Highlight
       font-family: 'Font-Condensed-Bold', sans-serif
@@ -43,13 +43,13 @@
     display: inline-block
     text-transform: uppercase
     font-family: 'Font-Condensed-Bold', sans-serif
-    font-size: 20px
+    font-size: 28px
     &:hover
       color: $white
       background-color: $cyan-dark
   &_Image
+    max-width: 50%
     width: 100%
-    max-width: 465px
 
 .Hero_Bottom_Detail
   position: absolute
@@ -128,6 +128,8 @@
     font-family: 'Font-Condensed-Bold', sans-serif
     font-size: 60px
   &_Caption
+    max-width: 1050px
+    margin: 0 auto
     color: $white
     font-size: 28px
     font-family: 'Font-Regular', sans-serif
@@ -197,7 +199,7 @@
     align-items: flex-start
   &_Title
     margin-top: 0
-    margin-bottom: 1rem
+    margin-bottom: 2rem
     color: $gray-dark
     font-family: 'Font-Condensed-Bold', sans-serif
     font-size: 26px
@@ -247,6 +249,7 @@
   &_Caption
     margin-bottom: 60px
     color: $white
+    font-family: 'Font-Regular', sans-serif
     font-size: 28px
     font-weight: 300
 
@@ -259,13 +262,13 @@
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4)
   display: grid
   grid-template-columns: 1fr
-  grid-template-rows: auto auto auto
+  grid-template-rows: 150px 40px auto
   flex-direction: column
   justify-items: center
   align-items: flex-start
   color: $white
   p
-    margin: 34px 0 0
+    margin: 30px 0 0
   &_Image
     width: 40%
   &_Title
@@ -323,12 +326,18 @@
     margin-top: 0
     font-size: 28px
   &_Button
+    width: 190px
+    height: 60px
     border-radius: 12px
     padding: 16px 24px
+    display: flex
+    justify-content: center
+    align-items: center
     background: conic-gradient(from 180deg at 50% 50%, #419FB1 -16.88deg, #55CBD8 131.25deg, #419FB1 243.75deg, #419FB1 343.12deg, #55CBD8 491.25deg)
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25)
     text-transform: uppercase
     font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 26px
     &:hover
       color: $white
       opacity: .8
@@ -366,6 +375,7 @@
     &_Text_Container
       padding: 20px 16px
     &_Title
+      margin-bottom: 1rem
       font-size: 23px
     &_Text
       font-size: 16px
@@ -379,7 +389,7 @@
     &_Title
       font-size: 70px
     &_Caption
-      font-size: 25px
+      font-size: 26px
     &_Link
       font-size: 18px
   .Visor_Container
@@ -445,6 +455,7 @@
       text-align: center
     &_Image
       margin: 1rem 0
+      max-width: 465px
   .Visor
     &_Container
       padding-bottom: 60px
@@ -462,8 +473,10 @@
   .Sectors
     padding: 60px 0
   .SectorCard
+    grid-template-rows: 100px 40px auto
     &_Image
-      width: 30%
+      width: unset
+      height: 90%
   .Contact_Fluid_Container
     min-height: fit-content
     padding-bottom: 0 !important
@@ -475,7 +488,7 @@
     &_Title
       font-size: 50px
     &_Caption
-      font-size: 26px
+      font-size: 28px
     &_Link
       font-size: 18px
   .Visor
@@ -513,10 +526,12 @@
   .SectorCard
     aspect-ratio: 19 /  17
     height: unset
+    grid-template-rows: auto auto auto
     &_Image
       width: 40%
+      height: unset
     p
-      margin-top: 20px
+      margin-top: 16px
   .Sector_Swiper
     display: block
   .Idea

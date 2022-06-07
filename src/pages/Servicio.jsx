@@ -49,7 +49,7 @@ const Servicio = () => {
 					image: Service1Item2,
 				}
 			],
-			caption: '¿Por que implementar la',
+			caption: '¿Por qué implementar la',
 			caption_highlight: 'Realidad Virtual?',
 			caption_image: Service1CaptionImage,
 			caption_items: [
@@ -74,7 +74,7 @@ const Servicio = () => {
 					image: Service2Item1,
 				}
 			],
-			caption: '¿Por que implementar la',
+			caption: '¿Por qué implementar la',
 			caption_highlight: 'Realidad Aumentada?',
 			caption_image: Service2CaptionImage,
 			caption_items: [
@@ -103,7 +103,7 @@ const Servicio = () => {
 					image: Service3Item2,
 				}
 			],
-			caption: '¿Por que implementar las',
+			caption: '¿Por qué implementar las',
 			caption_highlight: 'Experiencias 3D en la Web?',
 			caption_image: Service3CaptionImage,
 			caption_items: [
@@ -132,7 +132,7 @@ const Servicio = () => {
 					image: Service4Item2,
 				}
 			],
-			caption: '¿Por que implementar',
+			caption: '¿Por qué implementar',
 			caption_highlight: 'El Metaverso?',
 			caption_image: Service4CaptionImage,
 			caption_items: [
@@ -149,7 +149,7 @@ const Servicio = () => {
 	const servicesEn = [
 		{
 			title: 'Virtual Reality',
-			description: 'We remake three-dimensional environments, where the user can experience through the use of VR glasses',
+			description: 'We recreate 3D environments, where the user can experience through using VR headsets.',
 			title_image: Service1,
 			title_image_width: 245,
 			title_image_height: 266,
@@ -178,14 +178,14 @@ const Servicio = () => {
 			]
 		}, {
 			title: 'Augmented Reality',
-			description: 'We add virtual elements to our reality that can be viewed through the camera of mobile devices.',
+			description: 'We add to our reality virtual elements that can be viewed through the camera of mobile devices.',
 			title_image: Service2,
 			title_image_width: 250,
 			title_image_height: 265,
 			items: [
 				{
 					title: 'AR for retail',
-					description: 'Let the user know your products as a real-size 3D model within the environment before they are purchased.',
+					description: 'Let the user know your products as a real-size 3D model within the environment, before they are purchased.',
 					image: Service2Item1,
 				}
 			],
@@ -194,23 +194,23 @@ const Servicio = () => {
 			caption_image: Service2CaptionImage,
 			caption_items: [
 				{
-					text: 'It allows users to access the product display interactively without having to go to the point of sale.'
+					text: 'Allows users to access the product display interactively without the need to go to the point of sale.'
 				}, {
-					text: 'It allows users to verify complementary information about the product in a dynamic way.'
+					text: 'Allows users to verify complementary information about the product in a dynamic way.'
 				}, {
-					text: 'It allows you to add objects to our reality to transmit the message you want.'
+					text: 'Allows you to add objects to our reality to convey the message you want.'
 				}
 			]
 		}, {
 			title: '3D Web Experiences',
-			description: 'We create 3D interactive content to be viewed from a web page.',
+			description: 'We create 3D interactive content to be viewed from a website.',
 			title_image: Service3,
 			title_image_width: 250,
 			title_image_height: 195,
 			items: [
 				{
-					title: '3D web experience for products',
-					description: '3D designs that allow users to see what their next acquisition will look like from a web page, showing details such as its measurements, characteristics, and mode of use.',
+					title: 'Product 3D Web Experience',
+					description: '3D designs that allow users to see what their next acquisition will look like from a website, showing details such as its measurements, characteristics, and how to use it.',
 					image: Service3Item1,
 				}, {
 					title: '3D web experience for spaces',
@@ -219,15 +219,15 @@ const Servicio = () => {
 				}
 			],
 			caption: 'Why implement',
-			caption_highlight: '3D Web Experiences?',
+			caption_highlight: '3D Experiences on the Web?',
 			caption_image: Service3CaptionImage,
 			caption_items: [
 				{
 					text: 'It allows you to publicize your products, without the need to travel to a physical space.'
 				}, {
-					text: 'It allows users to get to know and interact with the product in a way that is closer to reality.'
+					text: 'It allows users to know and interact with the product in a way that is closer to reality.'
 				}, {
-					text: 'Provides a 3D experience without the need to download an app.'
+					text: 'Provides a 3D experience without the need to download an application.'
 				}
 			]
 		}, {
@@ -239,24 +239,24 @@ const Servicio = () => {
 			items: [
 				{
 					title: 'Interactive Virtual Environments',
-					description: 'Design of virtual environments, in which users can navigate and interact from a computer or mobile device.',
+					description: 'Virtual Environments design, in which users can navigate and interact from a computer or mobile device.',
 					image: Service4Item1,
 				}, {
 					title: 'Commercial Virtual Environments',
-					description: 'Design of virtual environments, in which users can browse and market tangible or non-tangible products from a computer or mobile device.',
+					description: 'Design of virtual environments, in which users will be able to navigate and commercialize tangible or non-tangible products from a computer or mobile device.',
 					image: Service4Item2,
 				}
 			],
 			caption: 'Why implement ',
-			caption_highlight: 'the Metaverse?',
+			caption_highlight: 'The Metaverse?',
 			caption_image: Service4CaptionImage,
 			caption_items: [
 				{
 					text: 'You have the disposition to create your own world, your own universe.'
 				}, {
-					text: 'You can create an optimized environment, in which to organize digital meetings and meet people from all corners of the planet.'
+					text: 'You can create an optimized environment in which to organize digital meetings and meet people from all over the world.'
 				}, {
-					text: 'It allows you to develop an environment in which you can carry out commercial activities, presentations or streaming with your avatar.'
+					text: 'It allows you to develop an environment in which you can perform commercial activities, presentations or streaming with your avatar.'
 				}
 			]
 		}

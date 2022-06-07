@@ -118,9 +118,9 @@ const Contacto = () => {
 								Contact us
 							</h1>
 							<p className={styles.Text} data-aos="fade-up" data-aos-delay="150">
-								We want to meet you! With pleasure<br/>
-								we support you to create, develop and<br/>
-								implement your idea.
+								We want to meet you! We are<br/>
+								happy to help you create, develop<br/>
+								and implement your idea.
 							</p>
 							<div className={styles.Data_Container} data-aos="fade-up" data-aos-delay="300">
 								<FontAwesomeIcon icon={faEnvelope}/>

@@ -217,7 +217,7 @@ const Home = () => {
 									Sociedad Internacional
 								</h4>
 								<p className={styles.Visor_Data_Text}>
-									Trabajamos junto a empsas de Estados Unidos, Canadá, Dubái, U.K. entre otros.
+									Trabajamos junto a empresas de Estados Unidos, Canadá, Dubái, U.K. entre otros.
 								</p>
 							</div>
 							<div className={styles.Visor_Data_Item} data-aos="fade-up" data-aos-delay="600">

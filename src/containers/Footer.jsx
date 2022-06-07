@@ -204,7 +204,7 @@ const Footer = () => {
 								Portfolio
 							</Link>
 							<Link to={'/nosotros'} className={styles.Link}>
-								About us
+								About Us
 							</Link>
 							<Link to={'/contacto'} className={styles.Link}>
 								Contact
@@ -224,7 +224,7 @@ const Footer = () => {
 								3D Web Experiences
 							</Link>
 							<Link to={'/servicio/metaverso'} className={styles.Link}>
-								Metaverse
+								Metaverse Services
 							</Link>
 						</div>
 					</div>
